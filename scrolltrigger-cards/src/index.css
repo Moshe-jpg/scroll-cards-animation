@@ -1,0 +1,39 @@
+*, ::before, ::after{
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.grid-container {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 30vw 30vw 30vw;
+  align-items: center;
+  justify-content: center;
+  background: #ffffff;
+  min-height: 100vh;
+}
+
+.grid-before {
+  height: 100vh;
+  background: green;
+}
+
+.grid-item {
+  min-height: 400px;
+  background: blue;
+  margin: 10px;
+  visibility: hidden;
+}
+
+@media screen and (max-width: 900px){
+  .grid-container {
+    grid-template-columns: 40vw 40vw;
+  }
+}
+
+@media screen and (max-width: 750px){
+  .grid-container {
+    grid-template-columns: 85vw;
+  }
+}
